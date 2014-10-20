@@ -1,28 +1,28 @@
 <div class="row no-padding">
-<div class="col-lg-offset-3 col-lg-5 no-padding-left no-padding-right paddingtop10p">
-<%= form_for(@customer) do |f| %>
-  <% if @customer.errors.any? %>
+  <div class="col-lg-offset-3 col-lg-5 no-padding-left no-padding-right paddingtop10p">
+    <%= form_for(@customer) do |f| %>
+    <% if @customer.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@customer.errors.count, "error") %> prohibited this customer from being saved:</h2>
 
       <ul>
-      <% @customer.errors.full_messages.each do |msg| %>
+        <% @customer.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
-      <% end %>
+        <% end %>
       </ul>
     </div>
-  <% end %>
-     <div class="form-group">
-        <%= f.text_field :name, :class => "form-control", :placeholder => "Enter Name"%>
-     </div>
-     <div class="form-group">
-        <%= f.text_area :address, :rows => 5, :class => "form-control", :placeholder => "Enter Address"%>
-     </div>
-     <div class="form-group">
-       <%= f.text_field :mobile_no, :class => "form-control", :placeholder => "Enter Mobile Number"%>
-     </div>
-    <%= f.submit("Save", class: "btn btn-info")%>
-    <%= link_to 'Back', customers_path,  :class=> "btn btn-default backbutton"%>
-<% end %>
-</div>
+    <% end %>
+    <div class="form-group">
+      <%= f.text_field :name, :class => "form-control", :placeholder => "Enter Name"%>
+    </div>
+    <div class="form-group">
+      <%= f.text_area :address, :rows => 5, :class => "form-control", :placeholder => "Enter Address"%>
+    </div>
+    <div class="form-group">
+     <%= f.text_field :mobile_no, :class => "form-control", :placeholder => "Enter Mobile Number"%>
+   </div>
+   <%= f.submit("Save", class: "btn btn-info")%>
+   <%= link_to 'Back', customers_path,  :class=> "btn btn-default backbutton"%>
+   <% end %>
+ </div>
 </div>
