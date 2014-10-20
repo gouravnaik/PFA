@@ -1,0 +1,45 @@
+<%= form_for(@pet) do |f| %>
+  <% if @pet.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@pet.errors.count, "error") %> prohibited this pet from being saved:</h2>
+
+      <ul>
+      <% @pet.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <p>Pet Name</p>
+    <%= f.text_field :name%>
+    <p>Color</p>
+    <%= f.text_field :color%>
+    <div class="input-daterange" data-behaviour='datepicker' id="datepicker" data-date-format="yyyy/mm/dd">
+    <p>DOB</p>
+    <%= f.text_field :dob,class: "input-small"%>
+    </div>
+    <p>Age
+      <%= f.select :age,(1..20)%></p>
+    <p>Tax
+    <%= f.select :tax, options_for_select(["Paid","Unpaid"]), :include_blank => true %></p>   
+    <div class="input-daterange" data-behaviour='datepicker' id="datepicker" data-date-format="yyyy/mm/dd">
+    <p>Tax Paid On</p>
+    <%= f.text_field :tax_paid_on,class: "input-small"%>
+    </div>
+    <p>Sterilized
+    <%= f.select :sterilized, options_for_select(["Yes","No"]), :include_blank => true %></p>
+    <p>Medical History</p>
+    <%= f.text_area :medical_history, :rows => 5 %>
+    <%= f.submit %>
+  
+<% end %>
+
+
+<script type="text/javascript">
+$('.datepicker').datepicker({
+        dateFormat: "yyyy-mm-dd"});
+$('[data-behaviour~=datepicker]').datepicker({
+        dateFormat: "yyyy-mm-dd"});
+</script>

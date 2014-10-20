@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+<h1>Pet Details</h1>
+<p> Pet Owner : <%= @pet.customer.name%> </p>
+<p> Pet Name : <%= @pet.name%> </p>
+<p> Pet Color : <%= @pet.color%> </p>
+<p> Pet Age : <%= @pet.age%> </p>
+<p> Pet DOB : <%= @pet.dob.strftime("%d/%m/%Y")%> </p>
+<p> Tax  : <%= @pet.tax%> </p>
+<p> Tax Paid On : <%= @pet.tax_paid_on.strftime("%d/%m/%Y")%> </p>
+<p> Sterilized : <%= @pet.sterilized %> </p>
+<p> Medical History : <%= @pet.medical_history%> </p>
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>

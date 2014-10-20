@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+<h1> Pet Details of Owner <%= @customer.name%> </h1>
+<%if !@customer.pets.blank?%>
+<table border=1>
+	<tr>
+		<th>S.No</th>
+		<th>Pet Name</th>
+		<th>Pet Color</th>
+		<th>Age</th>
+		<th>Pet DOB</th>
+		<th>Sterilized</th>
+	</tr>
+	<% @customer.pets.each_with_index do |pet,i|%>
+    <tr>
+    <td><%= i+1%>	
+	<td><%= link_to "#{pet.name}",{:controller => "pets", :action => "show", :id => pet.id }%></td>
+	<td><%= pet.color%></td>
+	<td><%= pet.age%></td>
+	<td><%= pet.dob.strftime("%d/%m/%Y")%></td>
+	<td><%= pet.sterilized%></td>
+    </tr>
+    <%end%>
+    <%end%><!-- 
+<%= link_to 'Edit', edit_customer_path(@customer) %> |
+<%= link_to 'Back', customers_path %>
+ -->
+ <%= link_to "Add Pets", {:controller => "pets", :action => "new", :customer => @customer.id }%>
+ 

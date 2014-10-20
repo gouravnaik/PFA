@@ -1,0 +1,35 @@
+<h1>Listing pets</h1>
+<div align="right">
+<%= render :partial => "search" %>
+</div>
+<table border=1>
+  <tr>
+    <th>S.No</th>
+    <th>Owner</th>
+    <th>Pet Name</th>
+    <th>Pet Color</th>
+    <th>Pet Age</th>
+    <th>Tax</th>
+    <th>Sterilized</th>
+    <th>Action</th>
+  </tr>
+
+<% @pets.each_with_index do |pet,i| %>
+  <tr>
+    <td><%=i+1%></td>
+    <td><%=pet.customer.name%></td>
+    <td><%=pet.name%></td>
+    <td><%=pet.color%></td>
+    <td><%=pet.age%></td>
+    <td><%=pet.tax%></td>
+    <td><%=pet.sterilized%></td>
+    <td><%= link_to 'Show', pet %>
+    <%= link_to 'Edit', edit_pet_path(pet) %>
+    <%= link_to 'Destroy', pet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Pet', new_pet_path %>
