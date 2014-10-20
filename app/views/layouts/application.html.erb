@@ -6,9 +6,15 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
-<body bgcolor="grey">
-<%=link_to "Home", welcome_index_path%>
-<%= yield %>
+<body>
+ <div class="full-container">
+  <div class="container">
+  	   <div class="logo">
+       <%= link_to image_tag("logo.jpeg", :class => "logo-img-width"), controller: 'welcome' %>
+       </div>
+       <%= yield %>
+  </div>
+</div>
 
 </body>
 </html>

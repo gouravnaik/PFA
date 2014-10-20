@@ -1,6 +1,10 @@
-<h1>Listing customers</h1>
+<div class="row no-padding">
+<div class="col-lg-offset-1 col-lg-7  wightbg padding-bottom3p">
 
-<table border=1>
+
+<h1 class="paddingtop10p heading">Listing customers</h1>
+
+<table class="table table-striped table-hover table-bordered">
   <tr>
     <th>Name</th>
     <th>Address</th>
@@ -19,7 +23,12 @@
    </tr>
    <% end %>
  </table>
+  <%= link_to 'Back', welcome_index_path,:class => 'btn btn-default pull-right' %>
+</div>
+</div>
 
- <br />
+ 
 
- <%= link_to 'New Customer', new_customer_path %>
+
+
+

@@ -1,0 +1,89 @@
+body #fade {
+	display: none;
+	background: #333333; 
+	position: fixed;
+	left: 0;
+	top: 0; 
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	opacity: .80;
+	z-index: 9999;
+	float:left;
+}
+
+  .simple_overlay {
+	/* must be initially hidden */
+	display:none;
+	/* place overlay on top of other elements */
+	z-index:10000;
+	/* styling */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background: #FFFFFF;
+	padding:10px;
+	min-height:300px;
+	float: left;
+	width:auto;
+	
+}
+/* close button positioned on upper right corner */
+.simple_overlay .close {
+	background-image:url('../images/close.png');
+	position:absolute;
+	right: -12px;
+      top: -9px;
+	cursor:pointer;
+	height:20px;
+	width:20px;
+	background-repeat:no-repeat;
+}
+*:first-child+html .simple_overlay .close /*For I E7*/
+{
+/*background:none;
+filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/close.png' ,sizingMethod='crop');*/
+}
+.poplight
+{
+	cursor:pointer;
+}
+body #fadelayerbig
+{
+	display: none;
+	background: #444444;
+	float:left;
+	left:0px;
+	top:0px;
+	z-index: 10;
+	width: 100%;
+	height: 100%;
+	opacity: .70;
+	z-index: 9999;
+	float:left;
+	position:absolute;
+}
+.simple_overlay-big
+{
+	z-index:10000;
+	display: none;
+	background-color:#ffffff;
+	min-height:180px;
+	float: left;
+	position: absolute;
+	top:0;
+	left: 50%;
+	width:530px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+.close-big-popup {
+    background: url("../images/close_big.png") no-repeat scroll 0 0 transparent;
+    height: 26px;
+    position: absolute;
+    right: 0;
+	cursor:pointer;
+    top: 0;
+    width: 26px;
+}

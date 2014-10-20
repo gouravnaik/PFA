@@ -1,11 +1,14 @@
-
+<div class="row no-padding">
+<div class="col-lg-6 paddingtopbottom pull-right">
 
 <%= form_tag({:controller => 'pets', :action => 'search'}, {:method => 'get'}) %>
 
 
-      <%= text_field_tag :search,"", value: params[:search],:id => 'search_field' %>
-      <%= submit_tag "Search ",:name => nil %> 
+      <%= text_field_tag :search,"", value: params[:search],:id => 'search_field'  %>
+      <%= submit_tag("Search ",:name => nil, class: "btn btn-info") %> 
       
-  
+      
+  </div>
+</div>
 
 
