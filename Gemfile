@@ -7,7 +7,9 @@ gem 'rails', '3.2.19'
 
 gem 'pg','~> 0.11'
 
-
+group :production do
+  gem 'pg','~> 0.11'
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -35,7 +37,7 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
- gem 'debugger'
+ #gem 'debugger'
 
  gem 'jquery-rails'
 
