@@ -40,6 +40,7 @@ class PetsController < ApplicationController
   # POST /pets
   # POST /pets.json
   def create
+    
     @pet = Pet.new(params[:pet])
 
     respond_to do |format|
