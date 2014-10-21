@@ -1,0 +1,200 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS reset */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+a {
+	text-decoration: none;
+}
+a:link, a:visited, a:active {
+	text-decoration: none;
+	color: #29A8DF;
+}
+
+body {
+	margin:0;
+	padding:0;
+	font-size:100%;
+	color:#666666;
+	font-family:Tahoma, Geneva, sans-serif;
+}
+ul, li, p, h1, h2, h3, h4, h5, h6, input {
+	margin:0;
+	padding:0;
+}
+ul, li {
+	list-style:none;
+}
+a {
+	text-decoration:none;
+	color:inherit;
+}
+* :focus { 
+	outline: 0;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+img, a img {
+	border:0px;
+}
+input::-moz-focus-inner {
+ border: 0 none;
+}
+
+/* Layout syles */
+
+.clear {
+	clear:both;
+}
+.left-floated {
+	float:left;
+}
+.rightt-floated {
+	float:right;
+}
+.main-wrapper {
+	width:100%;
+	float:left;
+	clear : both;
+}
+.main-wrapper-fixed {
+	width:1024px;
+	margin:auto;
+	overflow: hidden;
+}
+/*
+img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+*/
+.video embed,
+.video object,
+.video iframe {
+	width: 100%;
+	height: auto;
+}
+html {
+	-webkit-text-size-adjust: none;
+}
+body{
+
+}
+.full-container{
+	width:100%;
+	float:left;
+	height:100%;
+	background: url(dog.jpg) no-repeat top center #E5E6EA;
+}
+.container{
+	width:1200px;
+	margin:0 auto;
+}
+.logo{
+	width:100px;
+	height:100px;
+	float:left;
+}
+.logo-img-width{
+	max-width:100%;
+}
+.heading{
+	font-size:36px;
+	font-family: 'Arial';
+	color:#000;
+	text-align: center;
+	width: 90%;
+	float:left;
+	padding-top:35px;
+	padding-bottom:50px;
+}
+.menuitems{
+	text-align: center;
+    padding-top:20px;
+    padding-bottom:20px;
+    font-size:16px;
+    font-family: 'Arial';
+    background: #1A4C80;
+}
+.menuitems a{
+	 color:#fff;
+}
+.menuitems:hover{
+	background: #8CA6C0;
+}
+.menuitems:hover a{
+	color:#000;
+	background:none; 
+}
+.paddingtop10p{
+	padding-top:10%;
+}
+.backbutton{
+	color:#000;
+}
+.wightbg{background: #fff;}
+.padding-bottom3p{
+	padding-bottom: 3%;
+}
+.paddingtopbottom{
+	padding-top:20px;
+	padding-bottom:20px;
+}
+.bold{
+	font-weight:bold !important;
+}
+.viewowner .col-lg-12{
+	padding-bottom:20px;
+}
+.widthfull{
+	width:100%;
+}
